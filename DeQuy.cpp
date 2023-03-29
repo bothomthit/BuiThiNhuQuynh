@@ -1,16 +1,15 @@
 #include<stdio.h>
 #include<conio.h>
 #include<math.h>
-#define MAX 100
 void nhap (int a[], int &n) { 
 	do { 
 		printf("\nNhập số phần tử:"); 
 		scanf("%d", &n); 
-		if(n <= 0 || n > MAX) { 
+		if(n <= 0 || n > 100) { 
 		printf("\nSo phan tu nhap vao phai be hon 100 va lon hon 0 !"); 
 		} 
 	}
-  while(n <= 0 || n > MAX); 
+  while(n <= 0 || n > 100); 
 	for(int i = 0; i < n; i++) { 
 		printf("\nNhap a[%d]: ", i); 
 		scanf("%d", &a[i]); 
@@ -30,7 +29,7 @@ int tongChan(int a[], int n) {
 } 	
 int main() { 
 	int n; 
-	int a[MAX]; 
+	int a[100]; 
 	nhap(a, n); 
 	xuat(a, n); 
 	int tong = tongChan(a, n);
